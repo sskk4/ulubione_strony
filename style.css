@@ -1,0 +1,169 @@
+body
+{
+    margin:0;
+    padding:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo
+{
+    cursor: pointer;
+    margin:10px;
+    font-size:50px;
+    text-shadow: 5px 5px #c5d5e6;
+    
+    color:rgb(61, 61, 105);
+}
+
+.container
+{
+    
+    width:100%;
+    height: 100%;
+float:Left;
+  
+}
+
+.footer {
+
+
+    margin-top: 50px;
+    width: 100%;
+    color: rgb(146, 146, 187);
+    text-align: center;
+  }
+
+.form
+{
+    
+    padding:20px;
+}
+
+.title
+{
+    cursor:default;
+   
+    
+    padding:2%;
+    min-height: 50px;
+    width:50%;
+    background-color:rgb(220, 220, 247);
+    border:2px solid rgb(201, 201, 245);
+    margin:20px auto;
+    border-radius:1%;
+    
+}
+
+
+
+.button_add
+{
+    font-size:30px;
+    font-weight: bold;
+    color:rgb(51, 51, 70);
+    background-color:rgb(241, 241, 250);
+    min-width: 80px;
+    min-height: 30px;
+    padding:5px;
+    text-align: center;
+    border-radius:30px;
+    border:2px solid rgb(114, 114, 158);
+    cursor:pointer;
+    transition: 0.2s;
+}
+
+.button_add:hover
+{
+    color:white;
+    background-color:rgb(97, 110, 185);
+    border:2px solid rgb(61, 71, 131);
+
+}
+
+
+.adresy_delete
+{
+    margin-left:30px;
+    color:white;
+    font-weight: bolder;
+    text-decoration: none;
+    padding:5px;
+    background-color:rgb(161, 161, 189);
+    border:1px solid white;
+    border-radius: 50px;
+    width:30px;
+    transition:0.2s;
+}
+
+.adresy_delete:hover
+{
+    background-color:rgb(61, 71, 131);
+
+}
+.form_label
+{
+    border-radius:1%;
+    text-align: center;
+    padding:2%;
+    margin:10px auto;
+    width:50%;
+    min-height: 500px;
+    
+    clear:both;
+
+    background-color:rgb(206, 206, 236);
+
+}
+
+.text_title
+{
+    font-size:x-large;
+}
+
+.addres
+{
+    background-color:rgb(241, 241, 250);
+    border-radius:20px;
+    border:2px solid rgb(114, 114, 158);
+    padding:5px 20px;
+    width:350px;
+    height: 30px;
+    margin-top:10px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .form_label{width:100%; }
+    .title{width:100%;}
+
+    
+}
+
+.adresy
+{
+    text-decoration: none;
+    
+    margin-top:30px;
+    border-radius:10px;
+    padding:10px;
+    background-color:rgb(187, 187, 216);
+}
+
+.adresy:hover
+{
+    background-color:rgb(172, 172, 240);
+}
+
+.alert
+{
+    margin: 20px auto;
+    width: 50%;
+    border-radius:10px;
+    padding:10px;
+    background-color:rgb(216, 179, 223);
+}
+
+.red
+{
+    background-color: rgb(236, 123, 123);
+}
