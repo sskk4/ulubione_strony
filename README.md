@@ -1,6 +1,6 @@
 # ulubione_strony
 
-# application where u can add URL your favorite websites
+ application where u can add URL your favorite websites
 
 # screenshoot
 
