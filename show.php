@@ -1,7 +1,4 @@
 <?php
-
-
-
 if (isset($_GET['error']) && $_GET['error'] == 1) {
     echo '<div class="red alert"> Błąd podczas otwierania pliku. </div>';
 }
@@ -23,16 +20,17 @@ if (file_exists($filename)) {
     $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     $lines = array_reverse($lines);
     foreach ($lines as $line) {
-        $parsedUrl = parse_url($line);
-        $mainUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
-        $showUrl = $parsedUrl['host'];
-        echo '<div class="adresy">
-                  <a href="' . $line . '" target="_blank" class="adresy_link">' . $showUrl . '</a>
-                  <a href="index.php?delete=' . urlencode($line) . '" class="adresy_delete"> ---- </a>
-              </div>';
+        if (filter_var($line, FILTER_VALIDATE_URL)) {
+            $parsedUrl = parse_url($line);
+            $mainUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
+            $showUrl = $parsedUrl['host'];
+            echo '<div class="adresy">
+                      <a href="' . $line . '" target="_blank" class="adresy_link">' . $showUrl . '</a>
+                      <a href="index.php?delete=' . urlencode($line) . '" class="adresy_delete"> ---- </a>
+                  </div>';
+        }
     }
 } else {
     echo '<div class="red alert"> Plik adresy_stron.txt nie istnieje. </div>';
 }
-
 ?>

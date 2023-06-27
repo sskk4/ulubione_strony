@@ -2,7 +2,7 @@
 $adres = $_POST['adres'];
 
 // Sprawdzenie poprawności adresu URL
-if (preg_match('/^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,6}$/', $adres)) {
+if (filter_var($adres, FILTER_VALIDATE_URL)) {
     // Jeśli nie ma protokołu, dodaj "http://"
     if (!preg_match('/^https?:\/\//', $adres)) {
         $adres = 'http://' . $adres;
